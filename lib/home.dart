@@ -11,12 +11,7 @@ class Home extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 32, 31, 31),
       ),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/fondo.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
+        color: Colors.black, // Establece el color de fondo negro
         child: ListView(
           children: [
             Padding(
@@ -57,12 +52,12 @@ class Home extends StatelessWidget {
                     },
                     child: Text("Iniciar Sesión", style: TextStyle(fontSize: 18)),
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 83, 46, 46),
+                      primary: Color.fromARGB(255, 30, 120, 230),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(100),
                       ),
                       elevation: 10,
-                      shadowColor: Color.fromARGB(255, 65, 80, 74),
+                      shadowColor: Color.fromARGB(255, 30, 120, 230),
                       minimumSize: Size(140, 40),
                     ),
                   ),

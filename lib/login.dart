@@ -6,7 +6,6 @@ class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
 }
-
 class _LoginState extends State<Login> {
   bool showCompanyImage = true;
   TextEditingController usernameController =
@@ -20,12 +19,7 @@ class _LoginState extends State<Login> {
         backgroundColor: Color.fromARGB(255, 32, 31, 31),
       ),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/fondo.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
+        color: Colors.black, // Establece el color de fondo negro
         child: Container(
           color: Colors.black.withOpacity(0.7), // Ajusta la opacidad según sea necesario
           padding: const EdgeInsets.fromLTRB(25, 0, 25, 10),
@@ -102,7 +96,7 @@ class _LoginState extends State<Login> {
                   ]),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: const Color.fromARGB(255, 230, 30, 30),
+                  primary: Color.fromARGB(255, 30, 60, 230),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(100),
                   ),

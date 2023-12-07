@@ -10,21 +10,19 @@ class _SplashScreenState extends State<SplashScreen> {
   double _progress = 0.0;
   bool _isLoading = true;
 
-  void _simulateLoading() {
+  Future<void> _simulateLoading() async {
     const totalDuration = Duration(seconds: 10);
     const updateInterval = Duration(milliseconds: 100);
     int intervals = 0;
     int totalIntervals =
         totalDuration.inMilliseconds ~/ updateInterval.inMilliseconds;
 
-    Timer.periodic(updateInterval, (timer) {
+    await Future.doWhile(() async {
       if (intervals >= totalIntervals) {
-        timer.cancel();
         if (mounted) {
           setState(() {
             _isLoading = false;
-            _progress =
-                1.0; // Asegurarse de que el progreso sea exactamente 1.0
+            _progress = 1.0;
           });
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
@@ -32,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           );
         }
-        return;
+        return false;
       }
       if (mounted) {
         setState(() {
@@ -40,6 +38,8 @@ class _SplashScreenState extends State<SplashScreen> {
         });
       }
       intervals++;
+      await Future.delayed(updateInterval);
+      return true;
     });
   }
 
@@ -53,12 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/fondo.jpg"), // Agrega la imagen de fondo
-            fit: BoxFit.cover, // Ajusta la imagen para cubrir el contenedor
-          ),
-        ),
+        color: Colors.black,
         padding: EdgeInsets.all(16.0),
         child: Center(
           child: Column(
@@ -79,6 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 style: TextStyle(
                   fontSize: 38,
                   fontFamily: 'MiFuente',
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 20),

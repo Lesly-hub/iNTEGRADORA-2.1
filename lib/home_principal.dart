@@ -177,7 +177,6 @@ class HomePrincipal extends StatelessWidget {
 }
 
 class MenuScreen extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -187,45 +186,51 @@ class MenuScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/fondo.jpg"), // Ruta de la imagen de fondo
-            fit: BoxFit.cover, // Ajusta la imagen para cubrir el contenedor
+            image: AssetImage("assets/fondo.jpg"),
+            fit: BoxFit.cover,
           ),
         ),
         child: Center(
           child: SingleChildScrollView(
             padding: EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Historia',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+            child: Container(
+              padding: EdgeInsets.all(20), // Ajusta según sea necesario
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.7), // Cuadrado blanco transparente
+                borderRadius: BorderRadius.circular(10), // Ajusta según sea necesario
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Historia',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black, // Cambia el color del texto a negro
+                    ),
                   ),
-                ),
-                SizedBox(height: 10.0),
-                Text(
-                  'En un remoto y misterioso templo perdido en la selva, se encuentra un legendario tesoro conocido como "El Diamante del Destino". Solo los valientes pueden intentar encontrarlo, y uno de ellos es Jack, un intrépido explorador que ha dedicado su vida a buscar tesoros perdidos. Un día, Jack escucha rumores sobre el templo y decide embarcarse en una emocionante aventura para encontrar el Diamante del Destino. El templo está lleno de trampas mortales y criaturas peligrosas que protegen el tesoro. Jack debe superar obstáculos para llegar al final. A medida que avanza por las diferentes salas del templo, Jack descubre pistas ocultas que lo guían hacia la ubicación exacta del Diamante del Destino. Sin embargo, también se encuentra con otros exploradores rivales que están dispuestos a hacer cualquier cosa para obtener el tesoro antes que él. Jack debe usar su ingenio y habilidades para resolver acertijos complicados y desbloquear puertas secretas. Además, debe recolectar gemas brillantes dispersas por todo el templo para desbloquear poderes especiales que lo ayudarán en su búsqueda. Con cada nivel superado, la dificultad aumenta. Los rompecabezas se vuelven más complicados y las trampas más mortales. Pero Jack no se rinde fácilmente; está decidido a llegar al corazón del templo y reclamar el Diamante del Destino como suyo. Finalmente, después de enfrentarse a numerosos desafíos, Jack llega a la cámara central donde se encuentra el Diamante del Destino. Pero justo cuando está a punto de tomarlo, es emboscado por uno de los exploradores rivales. Una intensa batalla comienza entre ambos aventureros mientras luchan por obtener el codiciado tesoro.', // Tu texto
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                  SizedBox(height: 10.0),
+                  Text(
+                    'En un remoto y misterioso templo perdido en la selva, se encuentra un legendario tesoro conocido como "El Diamante del Destino". Solo los valientes pueden intentar encontrarlo, y uno de ellos es Jack, un intrépido explorador que ha dedicado su vida a buscar tesoros perdidos. Un día, Jack escucha rumores sobre el templo y decide embarcarse en una emocionante aventura para encontrar el Diamante del Destino. El templo está lleno de trampas mortales y criaturas peligrosas que protegen el tesoro. Jack debe superar obstáculos para llegar al final. A medida que avanza por las diferentes salas del templo, Jack descubre pistas ocultas que lo guían hacia la ubicación exacta del Diamante del Destino. Sin embargo, también se encuentra con otros exploradores rivales que están dispuestos a hacer cualquier cosa para obtener el tesoro antes que él. Jack debe usar su ingenio y habilidades para resolver acertijos complicados y desbloquear puertas secretas. Además, debe recolectar gemas brillantes dispersas por todo el templo para desbloquear poderes especiales que lo ayudarán en su búsqueda. Con cada nivel superado, la dificultad aumenta. Los rompecabezas se vuelven más complicados y las trampas más mortales. Pero Jack no se rinde fácilmente; está decidido a llegar al corazón del templo y reclamar el Diamante del Destino como suyo. Finalmente, después de enfrentarse a numerosos desafíos, Jack llega a la cámara central donde se encuentra el Diamante del Destino. Pero justo cuando está a punto de tomarlo, es emboscado por uno de los exploradores rivales. Una intensa batalla comienza entre ambos aventureros mientras luchan por obtener el codiciado tesoro.',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black, // Cambia el color del texto a negro
+                    ),
                   ),
-                ),
-                SizedBox(height: 20.0),
-              ],
+                  SizedBox(height: 20.0),
+                ],
+              ),
             ),
           ),
         ),
       ),
     );
   }
-  
 }
- class PerfilScreen extends StatelessWidget {
+class PerfilScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -242,45 +247,68 @@ class MenuScreen extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: EdgeInsets.all(16.0),
-            child: Form(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  // Agrega la imagen centrada
-                  Center(
-                    child: Image.asset(
-                      "assets/icono2.png",
-                      width: 100.0, // Ajusta el ancho según tus necesidades
-                      height: 100.0, // Ajusta la altura según tus necesidades
+            child: Container(
+              padding: EdgeInsets.all(20), // Ajusta según sea necesario
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.7), // Cuadrado blanco transparente
+                borderRadius: BorderRadius.circular(10), // Ajusta según sea necesario
+              ),
+              child: Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    // Agrega la imagen centrada
+                    Center(
+                      child: Image.asset(
+                        "assets/icono2.png",
+                        width: 100.0, // Ajusta el ancho según tus necesidades
+                        height: 100.0, // Ajusta la altura según tus necesidades
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 16.0),
-                  TextFormField(
-                    decoration: InputDecoration(labelText: 'Nombre de Usuario'),
-                  ),
-                  SizedBox(height: 16.0),
-                  TextFormField(
-                    decoration: InputDecoration(labelText: 'Correo'),
-                    keyboardType: TextInputType.emailAddress,
-                  ),
-                  SizedBox(height: 16.0),
-                  TextFormField(
-                    decoration: InputDecoration(labelText: 'Contraseña'),
-                    obscureText: true,
-                  ),
-                  SizedBox(height: 16.0),
-                  TextFormField(
-                    decoration: InputDecoration(labelText: 'Fecha de Nacimiento'),
-                    keyboardType: TextInputType.datetime,
-                  ),
-                  SizedBox(height: 16.0),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Aquí puedes manejar la lógica de guardar la información
-                    },
-                    child: Text('Guardar Cambios'),
-                  ),
-                ],
+                    SizedBox(height: 16.0),
+                    TextFormField(
+                      style: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      decoration: InputDecoration(
+                        labelText: 'Nombre de Usuario',
+                        labelStyle: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      ),
+                    ),
+                    SizedBox(height: 16.0),
+                    TextFormField(
+                      style: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      decoration: InputDecoration(
+                        labelText: 'Correo',
+                        labelStyle: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      ),
+                      keyboardType: TextInputType.emailAddress,
+                    ),
+                    SizedBox(height: 16.0),
+                    TextFormField(
+                      style: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      decoration: InputDecoration(
+                        labelText: 'Contraseña',
+                        labelStyle: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      ),
+                      obscureText: true,
+                    ),
+                    SizedBox(height: 16.0),
+                    TextFormField(
+                      style: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      decoration: InputDecoration(
+                        labelText: 'Fecha de Nacimiento',
+                        labelStyle: TextStyle(color: Colors.black), // Cambia el color del texto a negro
+                      ),
+                      keyboardType: TextInputType.datetime,
+                    ),
+                    SizedBox(height: 16.0),
+                    ElevatedButton(
+                      onPressed: () {
+                        // Aquí puedes manejar la lógica de guardar la información
+                      },
+                      child: Text('Guardar Cambios'),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -306,44 +334,52 @@ class PuntuacionGeneralScreen extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: DataTable(
-              headingTextStyle: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18.0,
-                color: Color.fromRGBO(253, 254, 255, 1),
+            child: Container(
+              margin: EdgeInsets.all(20), // Ajusta según sea necesario
+              padding: EdgeInsets.all(20), // Ajusta según sea necesario
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.7), // Cuadrado blanco transparente
+                borderRadius: BorderRadius.circular(10), // Ajusta según sea necesario
               ),
-              dataTextStyle: TextStyle(
-                fontSize: 16.0,
-                color: Colors.white,
+              child: DataTable(
+                headingTextStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                  color: Colors.black, // Cambia el color del texto a negro
+                ),
+                dataTextStyle: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black, // Cambia el color del texto a negro
+                ),
+                columns: [
+                  DataColumn(label: Text('Jugadores')),
+                  DataColumn(label: Text('Niveles')),
+                  DataColumn(label: Text('Puntuación')),
+                ],
+                rows: [
+                  DataRow(
+                    cells: [
+                      DataCell(Text('Josseline Alvarado Vargas')),
+                      DataCell(Text('Nivel 1')),
+                      DataCell(Text('100')),
+                    ],
+                  ),
+                  DataRow(
+                    cells: [
+                      DataCell(Text('Lesly Yareth Hernandez')),
+                      DataCell(Text('Nivel 2')),
+                      DataCell(Text('150')),
+                    ],
+                  ),
+                  DataRow(
+                    cells: [
+                      DataCell(Text('Ricardo Luna Santos')),
+                      DataCell(Text('Nivel 3')),
+                      DataCell(Text('150')),
+                    ],
+                  ),
+                ],
               ),
-              columns: [
-                DataColumn(label: Text('Jugadores')),
-                DataColumn(label: Text('Niveles')),
-                DataColumn(label: Text('Puntuación')),
-              ],
-              rows: [
-                DataRow(
-                  cells: [
-                    DataCell(Text('Josseline Alvarado Vargas')),
-                    DataCell(Text('Nivel 1')),
-                    DataCell(Text('100')),
-                  ],
-                ),
-                DataRow(
-                  cells: [
-                    DataCell(Text('Lesly Yareth Hernandez')),
-                    DataCell(Text('Nivel 2')),
-                    DataCell(Text('150')),
-                  ],
-                ),
-                DataRow(
-                  cells: [
-                    DataCell(Text('Ricardo Luna Santos')),
-                    DataCell(Text('Nivel 3')),
-                    DataCell(Text('150')),
-                  ],
-                ),
-              ],
             ),
           ),
         ),
@@ -381,44 +417,53 @@ class PuntuacionIndividualScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'assets/icono3.png', // Agrega la ruta correcta de la imagen
-                      width: 100, // Ajusta el ancho según tus necesidades
-                      height: 100, // Ajusta la altura según tus necesidades
+                      'assets/icono3.png',
+                      width: 100,
+                      height: 100,
                     ),
-                    DataTable(
-                      headingTextStyle: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18.0,
-                        color: Color.fromARGB(255, 255, 254, 254),
+                    Container(
+                      margin: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.7),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      dataTextStyle: TextStyle(
-                        fontSize: 16.0,
-                        color: Color.fromRGBO(248, 246, 245, 1)),
-                      dividerThickness: 5.0,
-                      columns: [
-                        DataColumn(
-                          label: Text('Jugador'),
-                          tooltip: 'Nombre del jugador',
+                      child: DataTable(
+                        headingTextStyle: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.0,
+                          color: Colors.black, // Cambia el color del texto a negro
                         ),
-                        DataColumn(
-                          label: Text('Nivel'),
-                          tooltip: 'Nivel del jugador',
+                        dataTextStyle: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.black, // Cambia el color del texto a negro
                         ),
-                        DataColumn(
-                          label: Text('Puntuación'),
-                          tooltip: 'Puntuación del jugador',
-                        ),
-                      ],
-                      rows: [
-                        DataRow(
-                          cells: [
-                            DataCell(Text('Josseline Alvarado Vargas')),
-                            DataCell(Text('Nivel 1')),
-                            DataCell(Text('1000')),
-                          ],
-                        ),
-                        // Agrega más filas según sea necesario
-                      ],
+                        dividerThickness: 5.0,
+                        columns: [
+                          DataColumn(
+                            label: Text('Jugador'),
+                            tooltip: 'Nombre del jugador',
+                          ),
+                          DataColumn(
+                            label: Text('Nivel'),
+                            tooltip: 'Nivel del jugador',
+                          ),
+                          DataColumn(
+                            label: Text('Puntuación'),
+                            tooltip: 'Puntuación del jugador',
+                          ),
+                        ],
+                        rows: [
+                          DataRow(
+                            cells: [
+                              DataCell(Text('Josseline Alvarado Vargas')),
+                              DataCell(Text('Nivel 1')),
+                              DataCell(Text('1000')),
+                            ],
+                          ),
+                          // Agrega más filas según sea necesario
+                        ],
+                      ),
                     ),
                   ],
                 ),
